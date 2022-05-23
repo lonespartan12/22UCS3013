@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center_vertical">
+
+    <TableRow
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" BLOOD PRESSURE \n CATEGORY"
+            android:textColor="@color/white"
+            android:background="#3A3B3C"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" SYSTOLIC mm Hg \n (upper number) "
+            android:textColor="@color/white"
+            android:background="#3A3B3C"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="          \n"
+            android:textColor="@color/white"
+            android:background="#3A3B3C"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" DIASTOLIC mm Hg \n (lower number) "
+            android:textColor="@color/white"
+            android:background="#3A3B3C"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+    </TableRow>
+
+    <TableRow
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" NORMAL \n"
+            android:textColor="@color/black"
+            android:background="#00FF00"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" LESS THAN 120 \n"
+            android:textColor="@color/black"
+            android:background="#00FF00"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" and \n"
+            android:textColor="@color/black"
+            android:background="#00FF00"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" LESS THAN 80 \n"
+            android:textColor="@color/black"
+            android:background="#00FF00"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+    </TableRow>
+
+    <TableRow
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ELEVATED \n"
+            android:textColor="@color/black"
+            android:background="#FFFF00"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 120 - 129 \n"
+            android:textColor="@color/black"
+            android:background="#FFFF00"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" and \n"
+            android:textColor="@color/black"
+            android:background="#FFFF00"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" LESS THAN 80 \n"
+            android:textColor="@color/black"
+            android:background="#FFFF00"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+    </TableRow>
+
+    <TableRow
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" HIGH \n STAGE 1"
+            android:textColor="@color/black"
+            android:background="#FFA500"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 130 - 139 \n"
+            android:textColor="@color/black"
+            android:background="#FFA500"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" or \n"
+            android:textColor="@color/black"
+            android:background="#FFA500"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 80 - 89\n"
+            android:textColor="@color/black"
+            android:background="#FFA500"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+    </TableRow>
+
+    <TableRow
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" HIGH \n STAGE 2"
+            android:textColor="@color/black"
+            android:background="#FF8C00"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 140 OR HIGHER \n"
+            android:textColor="@color/black"
+            android:background="#FF8C00"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" or \n"
+            android:textColor="@color/black"
+            android:background="#FF8C00"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 90 OR HIGHER\n"
+            android:textColor="@color/black"
+            android:background="#FF8C00"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+    </TableRow>
+
+    <TableRow
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" LIFE THREAT \n (seek urgent care)"
+            android:textColor="@color/black"
+            android:background="#FF0000"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" HIGHER THAN \n 180"
+            android:textColor="@color/black"
+            android:background="#FF0000"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" and/ \n or"
+            android:textColor="@color/black"
+            android:background="#FF0000"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" HIGHER THAN \n 120"
+            android:textColor="@color/black"
+            android:background="#FF0000"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_horizontal"/>
+    </TableRow>
+
+</TableLayout>
