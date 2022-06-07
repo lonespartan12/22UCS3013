@@ -15,9 +15,21 @@ class Player(id: String, score: Int = 0): Comparable<Player> {
         const val DEFAULT_SCORE = 0
     }
 
+    var id = id // var because we can possibly change the player id
+        get() = field
+        set(value) {field = value}
+
+    var score = if (score != DEFAULT_SCORE && score < 0) DEFAULT_SCORE else score
+        set(value) {
+            field = if (value < 0)
+                score
+            else value
+        }
+
     // TODO: override toString, returning the player's id and score
+    // override toString
     override fun toString(): String {
-        return ""
+        return "Player id: $id\nPlayer score: $score\n"
     }
 
     override fun compareTo(other: Player): Int {
@@ -26,9 +38,8 @@ class Player(id: String, score: Int = 0): Comparable<Player> {
 }
 
 fun main() {
-
     // TODO: instantiate a dynamic array of players named "leaderBoard"
-    
+    val leaderBoard = ArrayList<Player>()
 
     // TODO: add the following players into "leaderBoard"
     // SEEGAAAA, 2034
@@ -41,12 +52,21 @@ fun main() {
     val gandulaMaster = Player("gandulaMaster")
     val diablo5342    = Player("diablo5342", 23945)
     val lucasDiasC    = Player("LucasDiasC", 3452 )
-    
+
+    leaderBoard.add(seegaaaa)
+    leaderBoard.add(kon00)
+    leaderBoard.add(gandulaMaster)
+    leaderBoard.add(diablo5342)
+    leaderBoard.add(lucasDiasC)
 
     // trying to set a player's score to a negative value should have no effect
     kon00.score = -10
 
-    // display (sorted) leaderBoard by score in reverse order
-    for (player in leaderBoard.sorted())
+    // display (sorted) leaderBoard by score in reverse order (from high to low.)
+    var rank: Int = 1
+    for (player in leaderBoard.sorted()) {
+        println("Rank: " + rank)
         println(player)
+        rank += 1
+    }
 }
