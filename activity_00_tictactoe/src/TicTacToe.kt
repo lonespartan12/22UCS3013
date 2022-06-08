@@ -10,20 +10,55 @@ import kotlin.random.Random
 class TicTacToe(playerName: String, playerSymbol: Char = NOUGHTS) {
 
     companion object {
-        val NOUGHTS = 'O'
+        const val NOUGHTS = 'O'
         const val CROSSES = 'X'
         const val BLANK   = ' '
         const val BOARD_SIZE = 3
     }
 
-    // TODO: define "playerName" as a property
+    // TODOd: define "playerName" as a property
+    var playerName = playerName
+        get() = field // optional
+        set(value) { field = value } // optional
 
+    // TODOd: define "playerSymbol as a property; validate "playerSymbol", making NOUGHTS as default
+    var playerSymbol = if (playerSymbol != NOUGHTS && playerSymbol != CROSSES) NOUGHTS else playerSymbol
+        set(value) { field = if (value != NOUGHTS && value != CROSSES) field else value }
 
-    // TODO: define "playerSymbol as a property; validate "playerSymbol", making NOUGHTS as default
-
-
-    // TODO: define a "board" member variable (private) as a 2D char array of BOARD_SIZE x BOARD_SIZE
+    // TODOd: define a "board" member variable (private) as a 2D char array of BOARD_SIZE x BOARD_SIZE
     // initialize it with BLANKs
+    var board = Array(
+        BOARD_SIZE,
+        { Array(
+                BOARD_SIZE,
+                {
+                    BLANK
+                }
+            )
+        }
+    )
+
+    // another way
+    var boardv2 = Array(
+        BOARD_SIZE
+    ) {
+        Array(
+            BOARD_SIZE
+        ) {
+            BLANK
+        }
+    }
+
+    // another way
+    var boardv3 = Array(
+        BOARD_SIZE
+    ) { _ ->
+        Array(
+            BOARD_SIZE
+        ) { _ ->
+            BLANK
+        }
+    }
 
     /**
      * If there is a row with the same symbol, return the symbol; BLANK otherwise
@@ -47,10 +82,23 @@ class TicTacToe(playerName: String, playerSymbol: Char = NOUGHTS) {
     }
 
     /**
-     * TODO: If there is a column with the same symbol, return the symbol; BLANK otherwise
+     * TODOd: If there is a column with the same symbol, return the symbol; BLANK otherwise
      * @return symbol
      */
     private fun colWin(): Char {
+        for (j in 0 until BOARD_SIZE) {
+            val symbol = board[0][j]
+            if (symbol == BLANK)
+                continue
+            var found = true
+            for (i in 0 until BOARD_SIZE)
+                if (symbol != board[i][j]) {
+                    found = false
+                    break
+                }
+            if (found)
+                return symbol
+        }
         return BLANK
     }
 
@@ -85,11 +133,18 @@ class TicTacToe(playerName: String, playerSymbol: Char = NOUGHTS) {
     }
 
     /**
-     * TODO: if there is a winner, return its symbol; BLANK otherwise
+     * TODOd: if there is a winner, return its symbol; BLANK otherwise
      * @return symbol
      */
     fun getWinner(): Char {
-        return BLANK
+        var winner = rowWin()
+        if (winner != BLANK)
+            return winner
+        winner = colWin()
+        if (winner != BLANK)
+            return winner
+        winner = diagonalWin()
+        return winner
     }
 
     /**
@@ -178,5 +233,30 @@ class TicTacToe(playerName: String, playerSymbol: Char = NOUGHTS) {
  * TODO: implement a simple round of the game
  */
 fun main() {
-    
+    print("name? ")
+    val playerName = readLine() ?: return
+    val ticTacToe = TicTacToe(playerName)
+    while (!ticTacToe.isGameOver()) {
+        println(ticTacToe)
+        print("move? ")
+        val move = readLine() ?: continue
+        val coordinates = move.split(",")
+        val i = Integer.valueOf(coordinates[0])
+        val j = Integer.valueOf(coordinates[1])
+        ticTacToe.playerPlay(i, j)
+        if (!ticTacToe.isGameOver()) {
+            ticTacToe.computerPlay()
+        }
+    }
+    println(ticTacToe)
+    val winner = ticTacToe.getWinner()
+    if (winner == ticTacToe.playerSymbol) {
+        println("Congratulations ${ticTacToe.playerName}!")
+    }
+    else if (winner == ticTacToe.getComputerSymbol()) {
+        println("Computers are superior! I won!!!")
+    }
+    else {
+        println("Tie!!!")
+    }
 }
