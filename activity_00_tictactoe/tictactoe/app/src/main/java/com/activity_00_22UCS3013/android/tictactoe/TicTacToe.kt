@@ -10,7 +10,7 @@ import kotlin.random.Random
 class TicTacToe(playerName: String, playerSymbol: Char = NOUGHTS) {
 
     companion object {
-        val NOUGHTS = 'O'
+        const val NOUGHTS = 'O'
         const val CROSSES = 'X'
         const val BLANK   = ' '
         const val BOARD_SIZE = 3
@@ -19,7 +19,7 @@ class TicTacToe(playerName: String, playerSymbol: Char = NOUGHTS) {
     // TODO: define "playerName" as a property
     var playerName = playerName
         get() = field //optional return of field. we would actually write a getter if we have some condition or expression based on other variables.
-        set(value) { field = value }
+        set(value) { field = value } // also optional
 
     // TODO: define "playerSymbol as a property; validate "playerSymbol", making NOUGHTS as default
     var playerSymbol = if (playerSymbol != NOUGHTS && playerSymbol != CROSSES) NOUGHTS else playerSymbol
@@ -27,8 +27,20 @@ class TicTacToe(playerName: String, playerSymbol: Char = NOUGHTS) {
 
     // TODO: define a "board" member variable (private) as a 2D char array of BOARD_SIZE x BOARD_SIZE
     // initialize it with BLANKs
-    val board = Array(3,)
-
+    //var board = Array<Char>(BOARD_SIZE, { _ -> Array<Char>(BOARD_SIZE,{ _ -> ' '})})
+    var board = Array(BOARD_SIZE,{
+            Array(BOARD_SIZE,{
+                    BLANK
+                }
+            )
+        }
+    )
+    // another way
+/*    var boardv2 = Array(BOARD_SIZE,{Array(BOARD_SIZE, BLANK})
+*/
+    /*
+    var boardV3 =
+*/
     /**
      * If there is a row with the same symbol, return the symbol; BLANK otherwise
      * @return symbol
@@ -55,6 +67,19 @@ class TicTacToe(playerName: String, playerSymbol: Char = NOUGHTS) {
      * @return symbol
      */
     private fun colWin(): Char {
+        for (j in 0 until BOARD_SIZE){
+            val symbol = board[0][j]
+            if (symbol == BLANK)
+                continue
+            var found = true
+            for (i in 0 until BOARD_SIZE)
+                if (symbol != board[i][j]){
+                    found = false
+                    break
+                }
+            if (found)
+                return symbol
+        }
         return BLANK
     }
 
@@ -93,6 +118,13 @@ class TicTacToe(playerName: String, playerSymbol: Char = NOUGHTS) {
      * @return symbol
      */
     fun getWinner(): Char {
+        var winner = rowWin()
+        if (winner != BLANK)
+            return winner
+        //too fast missed the solution. :( I think this is right
+        winner = colWin()
+        if(winner != BLANK)
+            return winner
         return BLANK
     }
 
@@ -125,6 +157,7 @@ class TicTacToe(playerName: String, playerSymbol: Char = NOUGHTS) {
      * @param j column coordinate
      * @return true/false depending on whether the move was valid
      */
+    //Challenge TODO: this allows a player to change symbol in the middle of the game, this should be fixed
     fun playerPlay(i: Int, j: Int): Boolean {
         if (board[i][j] == BLANK) {
             board[i][j] = playerSymbol;
@@ -180,7 +213,18 @@ class TicTacToe(playerName: String, playerSymbol: Char = NOUGHTS) {
 
 /**
  * TODO: implement a simple round of the game
+ * ask user for name
+ * initialize tictactoe object
+ * loop while not game over
+ * ask player for move
+ * when game over show who won the game.
  */
 fun main() {
+    println("Enter player 1 name\n")
+    var name = String.valueOf(readLine())
+    println("Enter player Symbol\n")
+    var symbol = Char.valueOf(readLine())
+    val game = TicTacToe(name, symbol)
+    while(game.is)
     
 }
