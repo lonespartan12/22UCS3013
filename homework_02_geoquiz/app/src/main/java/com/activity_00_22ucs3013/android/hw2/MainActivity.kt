@@ -1,5 +1,5 @@
-//package edu.msudenver.geoquiz
-package com.activity_00_22ucs3013.android.hw2
+package edu.msudenver.geoquiz // commented out when running on my local machine.
+//package com.activity_00_22ucs3013.android.hw2 // added this package to run on my own machine.
 
 /*
  * CS3013 - Mobile App Dev. - Summer 2022
