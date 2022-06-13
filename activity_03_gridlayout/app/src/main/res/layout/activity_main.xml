@@ -2,10 +2,11 @@
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:columnCount="2">
+    android:columnCount="2"> <!-- only need to specify column counts, the layout manager
+    is smart enough to know that if we have 6 buttons and two columns, then we will have 3 rows.-->
 
     <Button
-        android:layout_gravity="fill"
+        android:layout_gravity="center"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
         android:text="One" />
