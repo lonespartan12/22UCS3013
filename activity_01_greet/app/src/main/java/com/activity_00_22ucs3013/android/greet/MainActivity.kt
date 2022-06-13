@@ -1,4 +1,5 @@
-package edu.msudenver.greet
+//package edu.msudenver.greet
+package com.activity_00_22ucs3013.android.greet
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,6 +14,8 @@ class MainActivity : AppCompatActivity() {
     // NOTE: following variable declaration statements were added
     private lateinit var nameText: EditText
     private lateinit var greetButton: Button
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
