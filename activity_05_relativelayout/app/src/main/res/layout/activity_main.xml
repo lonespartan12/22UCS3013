@@ -32,7 +32,8 @@
             android:backgroundTint="#0000FF"
             android:textColor="@color/white"
             android:text="BLUE"
-            android:layout_toRightOf="@+id/indigoButton"/>
+            android:layout_toRightOf="@+id/indigoButton"
+            android:layout_below="@+id/indigoButton"/>
 
     </RelativeLayout>
 
