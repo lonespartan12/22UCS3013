@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Activity_05_RelativeLayout.iml" filepath="$PROJECT_DIR$/.idea/modules/Activity_05_RelativeLayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Activity_05_RelativeLayout.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Activity_05_RelativeLayout.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Activity_05_RelativeLayout.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Activity_05_RelativeLayout.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Activity_05_RelativeLayout.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Activity_05_RelativeLayout.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Activity_05_RelativeLayout.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Activity_05_RelativeLayout.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
