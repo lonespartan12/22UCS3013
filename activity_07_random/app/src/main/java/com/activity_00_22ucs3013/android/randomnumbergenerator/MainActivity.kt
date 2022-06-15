@@ -1,4 +1,5 @@
-package edu.msudenver.randomnumbergenerator
+//package edu.msudenver.randomnumbergenerator
+package com.activity_00_22ucs3013.android.randomnumbergenerator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,11 +9,15 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var text: EditText
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         // TODO: get a reference to the textview
+        text = findViewbyId(R.id.)
 
         // TODO: write the for the "onClickListener"
         // 1a get a reference to the edittext "from"
