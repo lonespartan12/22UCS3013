@@ -9,7 +9,7 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var text: EditText
+    //private lateinit var text: EditText
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // TODO: get a reference to the textview
-        text = findViewbyId(R.id.)
+        //text = findViewbyId(R.id.)
+        var txtRandomNumber: TextView = findViewById(R.id.txtRandomNumber)
 
         // TODO: write the for the "onClickListener"
         // 1a get a reference to the edittext "from"
