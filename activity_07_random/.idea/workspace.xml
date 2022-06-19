@@ -9,9 +9,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b141dcb-1f9b-4da0-9091-aa74b6c5ea1d" name="Changes" comment="">
+    <list default="true" id="41fd2457-0b3e-4ec3-b50e-535cadfcdd48" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../activity_01_greet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../activity_01_greet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/activity_00_22ucs3013/android/randomnumbergenerator/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/activity_00_22ucs3013/android/randomnumbergenerator/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/activity_00_22ucs3013/android/randomnumbergenerator/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2AXTjyA8tUOANrmVCvo7cfZHYBd" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2AcuRK0glJkR7yLOj5E8WZA1XEc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,11 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\School\MobileAppDev\22UCS3013\activity_07_random\app\src\main\java\com\activity_00_22ucs3013\android\randomnumbergenerator" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../activity_01_greet" />
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -106,23 +105,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1b141dcb-1f9b-4da0-9091-aa74b6c5ea1d" name="Changes" comment="" />
-      <created>1655155068440</created>
+      <changelist id="41fd2457-0b3e-4ec3-b50e-535cadfcdd48" name="Changes" comment="" />
+      <created>1655321185142</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1655155068440</updated>
+      <updated>1655321185142</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
