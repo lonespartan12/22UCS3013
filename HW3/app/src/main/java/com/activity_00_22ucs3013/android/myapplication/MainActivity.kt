@@ -63,6 +63,7 @@ class NumberGuessing {
 class MainActivity : AppCompatActivity() {
 
     var numberGuessing = NumberGuessing()
+    //val editText: EditText = findViewById(R.id.edtNumber) // this was giving me problems and crashing the app.
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,42 +81,8 @@ class MainActivity : AppCompatActivity() {
             // if the user guessed right, show a Toast with a message displaying "Number X guessed after Y attempts!" substituting X and Y accordingly; reset the game
             val outcome = numberGuessing.attempt(num)
 
-            val GameOverToast =  Toast.makeText(
-                this,
-                "Number ${num} guessed after ${numberGuessing.attempts} attempts!\n GAME OVER!\n",
-                Toast.LENGTH_SHORT)
-            GameOverToast.setGravity(Gravity.TOP,0,200)
-
-            val InvalidGuessToast = Toast.makeText(
-                this,
-                "Number ${num} is a invalid guess; try again!\n",
-                Toast.LENGTH_SHORT
-            )
-            InvalidGuessToast.setGravity(Gravity.TOP,0,200)
-
-            val PreviousGuessToast = Toast.makeText(
-                this,
-                "Number ${num} has already been guessed; try again!\\n",
-                Toast.LENGTH_SHORT
-            )
-            PreviousGuessToast.setGravity(Gravity.TOP,0,200)
-
-            val LoGuessToast = Toast.makeText(
-                this,
-                "Number ${num} is too low; try again!\n",
-                Toast.LENGTH_SHORT
-            )
-            LoGuessToast.setGravity(Gravity.TOP,0,200)
-
-            val HiGuessToast = Toast.makeText(
-                this,
-                "Number ${num} is too high; try again!\n",
-                Toast.LENGTH_SHORT
-            )
-            HiGuessToast.setGravity(Gravity.TOP,0,200)
-
             val dictionary = mapOf(
-                 0 to "Number ${num} guessed after ${numberGuessing.attempts} attempts!\nGAME OVER!\n",
+                0 to "Number ${num} guessed after ${numberGuessing.attempts} attempts!\nGAME OVER!\n",
                 1 to "Number ${num} is a invalid guess; try again!\n",
                 2 to "Number ${num} has already been guessed; try again!\\n",
                 3 to "Number ${num} is too low; try again!\n",
@@ -132,44 +99,30 @@ class MainActivity : AppCompatActivity() {
             }
 
             when (outcome){
-                0 -> toastDisplay(0) //GameOver.show()
-                1 -> /*Toast.makeText(
-                    this,
-                    "Number ${num} is a invalid guess; try again!\n",
-                    Toast.LENGTH_SHORT
-                ).show()*/
-                    //InvalidGuessToast.show()
-                toastDisplay(1)
-                2 -> /*Toast.makeText(
-                    this,
-                    "Number ${num} has already been guessed; try again!\n",
-                    Toast.LENGTH_SHORT
-                ).show()*/
-                    //PreviousGuessToast.show()
-                    toastDisplay(2)
-                3 -> /*Toast.makeText(
-                    this,
-                    "Number ${num} is too low; try again!\n",
-                    Toast.LENGTH_SHORT
-                ).show()*/
-                    //LoGuessToast.show()
-                    toastDisplay(3)
-                4 -> /*Toast.makeText(
-                    this,
-                    "Number ${num} is too high; try again!\n",
-                    Toast.LENGTH_SHORT
-                ).show()*/
-                    //HiGuessToast.show()
-                    toastDisplay(4)
+                0 -> toastDisplay(0)
+                1 -> toastDisplay(1)
+                2 -> toastDisplay(2)
+                3 -> toastDisplay(3)
+                4 -> toastDisplay(4)
             }
             // TODO #4: prepare the next round by clearing the text
             if(outcome == 0){
                 numberGuessing.reset()
+                editText.setText("")
             }
         }
     }
 
     override fun onSaveInstanceState(outState: Bundle){
         super.onSaveInstanceState(outState)
+        val editText: EditText = findViewById(R.id.edtNumber)
+        val number = Integer.valueOf(editText.text.toString())
+        outState.putInt("number", number)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle){
+        super.onRestoreInstanceState(savedInstanceState)
+        val editText: EditText = findViewById(R.id.edtNumber)
+        editText.setText(savedInstanceState.getInt("number").toString() ?: "")
     }
 }
