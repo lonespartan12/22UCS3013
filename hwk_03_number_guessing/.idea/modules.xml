@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hwk_03_number_guessing.iml" filepath="$PROJECT_DIR$/.idea/modules/hwk_03_number_guessing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/hwk_03_number_guessing.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/hwk_03_number_guessing.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/hwk_03_number_guessing.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/hwk_03_number_guessing.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/hwk_03_number_guessing.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/hwk_03_number_guessing.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/hwk_03_number_guessing.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/hwk_03_number_guessing.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
