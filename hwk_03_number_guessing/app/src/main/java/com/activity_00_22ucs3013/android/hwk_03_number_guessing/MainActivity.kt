@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
             // if the user guessed right, show a Toast with a message displaying "Number X guessed after Y attempts!" substituting X and Y accordingly; reset the game
             if(num >= 0 && num <= 100){
                 Toast.makeText(this,R.string.correct_toast, Toast.LENGTH_SHORT).show()
-
+                    .m
             }
             // TODO #4: prepare the next round by clearing the text
         }
