@@ -1,6 +1,5 @@
-package com.activity_00_22ucs3013.android.myapplication
-//package edu.msudenver.number_guessing // remove comment when grading
-//package com.activity_00_22ucs3013.android.hwk_03_number_guessing // comment out when grading
+package edu.msudenver.number_guessing // remove comment when grading
+//package com.activity_00_22ucs3013.android.myapplication // comment out when grading
 
 /*
  * CS3013 - Mobile App Dev. - Summer 2022
