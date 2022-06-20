@@ -1,4 +1,5 @@
-package edu.msudenver.number_guessing
+//package edu.msudenver.number_guessing // remove comment when grading
+package com.activity_00_22ucs3013.android.hwk_03_number_guessing // comment out when grading
 
 /*
  * CS3013 - Mobile App Dev. - Summer 2022
@@ -65,16 +66,33 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // TODO #1: get a reference to the "go" Button and to the "edtNumber" EditText
-        val btnGo = null
-        val editText = null
+        val btnGo: Button = findViewById(R.id.btnGo)
+        val editText: EditText = findViewById(R.id.edtNumber)
 
         btnGo.setOnClickListener {
             // TODO #2: extract the number from the "edtNumber" EditText
+            //view: View ->
+            val num = Integer.valueOf(editText.text.toString())
 
             // TODO #3: show a Toast with an appropriate message depending on the result of the user's attempt
             // if the user guessed right, show a Toast with a message displaying "Number X guessed after Y attempts!" substituting X and Y accordingly; reset the game
-            
+            if(num >= 0 && num <= 100){
+                Toast.makeText(this,R.string.correct_toast, Toast.LENGTH_SHORT).show()
+
+            }
             // TODO #4: prepare the next round by clearing the text
         }
+
+
+    }
+
+    private fun correctNum(num: Int){
+
+    }
+
+    private fun inRange(num: Int){
+
+        true
+
     }
 }
